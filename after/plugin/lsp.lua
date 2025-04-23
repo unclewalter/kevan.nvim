@@ -6,6 +6,8 @@ require("mason").setup {
 	},
 }
 
+require("mason-lspconfig").setup()
+
 vim.lsp.config('rust_analyzer', {
   settings = {
     ['rust-analyzer'] = {},
@@ -25,5 +27,5 @@ vim.lsp.config('arduino_language_server', {
 	},
 
 	on_attach = on_attach,
-	--capabilities = capabilities,
+	capabilities = capabilities,
 })

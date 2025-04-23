@@ -1,8 +1,15 @@
 return {
 	{'akinsho/toggleterm.nvim', version = "*", config = true},
 	{'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-	{'williamboman/mason.nvim'},
-	{'neovim/nvim-lspconfig'},
+	{
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+	},
+	{
+		"ibhagwan/fzf-lua",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
