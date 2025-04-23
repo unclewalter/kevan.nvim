@@ -1,4 +1,3 @@
-require("toggleterm").setup{
-    open_mapping = [[<c-\>]],
-    autochdir = true
+require("toggleterm").setup {
+	open_mapping = [[<c-\>]], 
 }
