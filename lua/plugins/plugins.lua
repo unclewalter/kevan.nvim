@@ -7,8 +7,17 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	{
-		"ibhagwan/fzf-lua",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		"folke/snacks.nvim",
+		opts = {
+			picker = { enabled = true },
+			
+		},
+		keys = {
+			{ "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
+			{ "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+
+		}
+
 	},
 	{
 		"folke/which-key.nvim",
