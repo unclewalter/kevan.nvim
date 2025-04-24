@@ -6,21 +6,8 @@ require("mason").setup {
 	},
 }
 
-require("mason-lspconfig").setup()
-
-vim.lsp.config('rust_analyzer', {
-  settings = {
-    ['rust-analyzer'] = {},
-  },
-})
-
-vim.lsp.enable('rust_analyzer')
-
-vim.lsp.enable('clangd')
-
-vim.lsp.enable('arduino_language_server')
-
-vim.lsp.config('arduino_language_server', { 
+require("auto-lsp").setup({
+  ["arduino_language_server"] = {
 	cmd = {
 		"arduino-language-server",
 		"-cli-config", "~/Library/.arduino15/arduino-cli.yaml",
@@ -28,4 +15,5 @@ vim.lsp.config('arduino_language_server', {
 
 	on_attach = on_attach,
 	capabilities = capabilities,
+  },
 })

@@ -19,8 +19,13 @@ return {
 
 	{'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 	{
+		"WieeRd/auto-lsp.nvim",
+		dependencies = { "neovim/nvim-lspconfig" },
+		event = "VeryLazy",
+		opts = {},
+	},
+	{
 		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	},
 	{
