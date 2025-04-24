@@ -36,6 +36,7 @@ return {
 		keys = {
 			{ "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
 			{ "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+			{ "<leader>fg", function() Snacks.picker.grep() end, desc = "Grep" }
 
 		}
 
