@@ -8,6 +8,15 @@ return {
 		}
 	},
 
+	{
+		"aserowy/tmux.nvim",
+		opts = {
+			copy_sync = {
+				enable = true
+			}
+		}
+	},
+
 	{'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 	{
 		"williamboman/mason.nvim",
