@@ -1,5 +1,13 @@
 return {
-	{'akinsho/toggleterm.nvim', version = "*", config = true},
+	{
+		'akinsho/toggleterm.nvim', 
+		version = "*", 
+		config = {
+			open_mapping = [[<c-\>]],
+			autochdir = true
+		}
+	},
+
 	{'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 	{
 		"williamboman/mason.nvim",
