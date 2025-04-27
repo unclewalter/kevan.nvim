@@ -1,4 +1,6 @@
 return {
+	
+	-- UI stuff	
 	{
 		'akinsho/toggleterm.nvim', 
 		version = "*", 
@@ -8,15 +10,7 @@ return {
 		}
 	},
 
-	{
-		"aserowy/tmux.nvim",
-		opts = {
-			copy_sync = {
-				enable = true
-			}
-		}
-	},
-
+	-- LSP stuff 
 	{'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 	{
 		"WieeRd/auto-lsp.nvim",
@@ -28,9 +22,32 @@ return {
 		"williamboman/mason.nvim",
 	},
 	{
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"L3MON4D3/LuaSnip",
+			"hrsh7th/cmp-nvim-lsp",
+			"saadparwaiz1/cmp_luasnip",
+			"rafamadriz/friendly-snippets" 
+		}
+	},
+
+	-- Handy functional things
+	{
+		"aserowy/tmux.nvim",
+		opts = {
+			copy_sync = {
+				enable = true
+			}
+		}
+	},
+	{
 		"folke/snacks.nvim",
 		opts = {
 			picker = { enabled = true },
+			indent = { 
+				char = "│",
+
+			}
 			
 		},
 		keys = {
