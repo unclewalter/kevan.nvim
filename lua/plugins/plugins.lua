@@ -74,5 +74,10 @@ return {
 				desc = "Buffer Local Keymaps (which-key)",
 			},
 		},
+	},
+	-- Embedded Systems
+	{
+		"sbatin/platformio.nvim",
+		dependencies = { "numToStr/FTerm.nvim" },
 	}
 }
