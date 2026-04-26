@@ -9,26 +9,35 @@ return {
 			autochdir = true
 		}
 	},
+	{'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 
 	-- LSP stuff 
-	{'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 	{
-		"WieeRd/auto-lsp.nvim",
-		dependencies = { "neovim/nvim-lspconfig" },
-		event = "VeryLazy",
-		opts = {},
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',  -- This is the bridge
+		'neovim/nvim-lspconfig',
 	},
 	{
-		"williamboman/mason.nvim",
-	},
-	{
-		"hrsh7th/nvim-cmp",
+		'hrsh7th/nvim-cmp',
 		dependencies = {
-			"L3MON4D3/LuaSnip",
-			"hrsh7th/cmp-nvim-lsp",
-			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets" 
+			'hrsh7th/cmp-nvim-lsp',     -- LSP source for nvim-cmp
+			'hrsh7th/cmp-buffer',       -- Buffer completions
+			'hrsh7th/cmp-path',         -- Path completions
+			'L3MON4D3/LuaSnip',         -- Snippet engine
+			'saadparwaiz1/cmp_luasnip', -- Snippet completions
 		}
+	},
+	{
+		'ray-x/lsp_signature.nvim',
+		config = function()
+			require('lsp_signature').setup({
+				bind = true,
+				handler_opts = {
+					border = "rounded"
+				},
+				hint_enable = false,  -- Disable virtual text hints if you find them annoying
+			})
+		end
 	},
 
 	-- Handy functional things
