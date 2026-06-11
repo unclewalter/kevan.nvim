@@ -1,5 +1,5 @@
 return {
-	
+
 	-- UI stuff	
 	{
 		'akinsho/toggleterm.nvim', 
@@ -49,6 +49,7 @@ return {
 			}
 		}
 	},
+	{ 'nvim-mini/mini.align', version = false },
 	{
 		"folke/snacks.nvim",
 		opts = {
@@ -57,7 +58,7 @@ return {
 				char = "│",
 
 			}
-			
+
 		},
 		keys = {
 			{ "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
@@ -72,7 +73,7 @@ return {
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		opts = {
-			
+
 		},
 		keys = {
 			{
