@@ -49,7 +49,8 @@ return {
 			}
 		}
 	},
-	{ 'nvim-mini/mini.align', version = false },
+	{ 'nvim-mini/mini.align', version = '*' },
+	{ 'nvim-mini/mini.pairs', version = '*' },
 	{
 		"folke/snacks.nvim",
 		opts = {
